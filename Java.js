@@ -1,27 +1,3 @@
-const searchInput = document.getElementById('searchInput');
-const searchResults = document.getElementById('searchResults');
-
-searchInput.addEventListener('input', function() {
-  const searchTerm = searchInput.value;
-  
-  // Simulate fetching search results from the server
-  const results = fetchSearchResults(searchTerm);
-  
-  // Clear previous results
-  searchResults.innerHTML = '';
-  
-  // Display new results
-  results.forEach(function(result) {
-    const li = document.createElement('li');
-    li.textContent = result;
-    searchResults.appendChild(li);
-  });
-});
-
-function fetchSearchResults(searchTerm) {
-  // Simulated search results
-  return ['Result 1', 'Result 2', 'Result 3'];
-}
 const registrationForm = document.getElementById('registrationForm');
 
 registrationForm.addEventListener('submit', function(event) {
