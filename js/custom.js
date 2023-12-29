@@ -16,4 +16,19 @@ function myMap() {
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
+/**search fooe a book**/
+function search() {
 
+    let searcbar = document.querySelector('.search-Input').value.toUpperCase();
+    let booklist = document.querySelector('.row');
+    let book = document.querySelectorAll('.box');
+    let bookName = document.getElementsByTagName('h5');
+    for (let i = 0; i < bookName.length; i++) {
+        if (bookName[i].innerHTML.toUpperCase().indexOf(searcbar) >= 0) {
+            book[i].style.display = "";
+        } else {
+            book[i].style.display = "none";
+        }
+    }
+
+}
